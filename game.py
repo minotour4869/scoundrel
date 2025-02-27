@@ -1,6 +1,6 @@
 from rich.console import Console
 try:
-    from msvcrt import getch
+    from msvcrt import getwch as getch
 except ImportError:
     from getch import getch
 
@@ -56,6 +56,8 @@ You don\'t have any weapon to equip[/yellow]'
                     self.__use_weapon = not self.__use_weapon
                 elif char >= '1' and char <= '4':
                     self.__play(ord(char) - ord('1'))
+                elif char.lower() == 'q':
+                    running = False
                 elif char == '?':
                     self.__prompt = '''
 \[1-4] Play a card
