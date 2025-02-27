@@ -1,0 +1,5 @@
+build/
+dist/
+scoundrel/
+__pycache__/
+main.spec
