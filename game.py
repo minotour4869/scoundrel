@@ -15,7 +15,7 @@ class PlayException(Exception):
 
 
 class Scoundrel:
-    def __init__(self, starting_health=10):
+    def __init__(self, starting_health=20):
         __EXCLUDE = [*(4*i + 2 for i in range(11, 15)),
                      *(4*i + 3 for i in range(11, 15))]
         self.__deck = [i for i in range(8, 60) if i not in __EXCLUDE]
